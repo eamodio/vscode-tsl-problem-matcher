@@ -1,0 +1,120 @@
+{
+    "name": "tsl-problem-matcher",
+    "displayName": "TypeScript + Webpack Problem Matchers",
+    "description": "Provides problem matchers for TypeScript projects using Webpack with ts-loader and/or tslint-loader",
+    "version": "0.0.1",
+    "author": {
+        "name": "Eric Amodio",
+        "email": "eamodio@gmail.com"
+    },
+    "publisher": "eamodio",
+    "license": "SEE LICENSE IN LICENSE",
+    "homepage": "https://github.com/eamodio/vscode-tsl-problem-matcher/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/eamodio/vscode-tsl-problem-matcher/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eamodio/vscode-tsl-problem-matcher.git"
+    },
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "typescript",
+        "webpack",
+        "problem matcher",
+        "tasks",
+        "ts-loader"
+    ],
+    "contributes": {
+        "problemMatchers": [
+            {
+                "name": "ts-webpack",
+                "label": "TypeScript + Webpack Problem Matcher (ts-loader)",
+                "owner": "typescript",
+                "fileLocation": "absolute",
+                "severity": "error",
+                "source": "ts",
+                "pattern": [
+                    {
+                        "regexp": "\\[tsl\\] ERROR in (.*)?\\((\\d+),(\\d+)\\)",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3
+                    },
+                    {
+                        "regexp": "\\s*TS\\d+:\\s*(.*)",
+                        "message": 1
+                    }
+                ]
+            },
+            {
+                "name": "tslint-webpack",
+                "label": "TypeScript + Webpack Lint Problem Matcher (tslint-loader)",
+                "owner": "typescript",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "severity": "warning",
+                "source": "tslint",
+                "pattern": [
+                    {
+                        "regexp": "WARNING in (.*)",
+                        "file": 1
+                    },
+                    {
+                        "regexp": "Module Warning .*"
+                    },
+                    {
+                        "regexp": "\\[(\\d+), (\\d+)\\]: (.*)",
+                        "line": 1,
+                        "column": 2,
+                        "message": 3,
+                        "loop": true
+                    }
+                ]
+            },
+            {
+                "base": "$ts-webpack",
+                "name": "ts-webpack-watch",
+                "label": "TypeScript + Webpack Watch Problem Matcher (ts-loader)",
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "Compilation starting…"
+                    },
+                    "endsPattern": {
+                        "regexp": "Compilation finished"
+                    }
+                }
+            },
+            {
+                "base": "$tslint-webpack",
+                "name": "tslint-webpack-watch",
+                "label": "TypeScript + Webpack Lint Watch Problem Matcher (tslint-loader)",
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "Compilation starting…"
+                    },
+                    "endsPattern": {
+                        "regexp": "Compilation finished"
+                    }
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "pack": "vsce package",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "pub": "vsce publish"
+    },
+    "devDependencies": {
+        "vscode": "1.1.21"
+    }
+}
