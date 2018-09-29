@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.4]
+
+### Added
+
+- Adds support for `--info-verbosity verbose` as [webpack/webpack-cli#570](https://github.com/webpack/webpack-cli/issues/570) as been fixed
+
 ## [0.0.3]
 
 ### Fixed

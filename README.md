@@ -38,8 +38,6 @@ The following example shows how to add problem matchers to your project:
 
 👉 In order for **$ts-webpack-watch** and **$tslint-webpack-watch** to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --env.development --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
 
-If you are returning multiple configurations from your `webpack.config.js` note that currently `--info-verbosity verbose` causes webpack to crash &mdash; See 🐛 [webpack/webpack#7906](https://github.com/webpack/webpack/issues/7906)
-
 You can also use **$ts-webpack-watch** and **$tslint-webpack-watch** as a base problem matcher for your own custom needs:
 
 ```json
