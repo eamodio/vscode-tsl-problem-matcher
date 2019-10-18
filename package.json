@@ -18,7 +18,7 @@
         "url": "https://github.com/eamodio/vscode-tsl-problem-matcher.git"
     },
     "engines": {
-        "vscode": "^1.25.0"
+        "vscode": "^1.37.0"
     },
     "categories": [
         "Programming Languages"
@@ -196,11 +196,11 @@
         ]
     },
     "scripts": {
-        "pack": "vsce package",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "pub": "vsce publish"
+        "pack": "vsce package --yarn",
+        "pub": "vsce publish --yarn"
     },
     "devDependencies": {
-        "vscode": "1.1.21"
+        "@types/vscode": "1.37.0",
+        "vsce": "1.68.0"
     }
 }

@@ -1,4 +1,13 @@
+.github/**
 .vscode/**
+node_modules/**
 src/**
+test/**
+*.map
+.gitattributes
 .gitignore
-package-lock.json
+.prettierrc
+.yarnrc
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+yarn.lock
