@@ -1,15 +1,19 @@
-# TypeScript + Webpack Problem Matchers for Visual Studio Code
+# TypeScript + Webpack Problem Matchers for VS Code
 
-Provides [problem matchers](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers) for use with TypeScript projects using [Webpack](https://webpack.js.org/) with [ts-loader](https://github.com/TypeStrong/ts-loader) and/or [tslint-loader](https://github.com/wbuchwalter/tslint-loader).
+Provides [problem matchers](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers) for use with TypeScript projects using [Webpack](https://webpack.js.org/) with [ts-loader](https://github.com/TypeStrong/ts-loader), [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) with or without [ESLint](https://eslint.org/), and/or [tslint-loader](https://github.com/wbuchwalter/tslint-loader).
 
 ## Features
 
 Provides the following problem matchers:
 
-- **$ts-webpack** &mdash; adds errors reported by ts-loader
-- **$tslint-webpack** &mdash; adds lint warnings reported by tslint-loader
-- **$ts-webpack-watch** &mdash; adds errors reported by ts-loader while in watch mode
-- **$tslint-webpack-watch** &mdash; adds lint warnings reported by tslint-loader while in watch mode
+- **\$ts-webpack** &mdash; adds errors and warnings reported by ts-loader
+- **\$ts-webpack-watch** &mdash; adds errors and warnings reported by ts-loader while in watch mode
+- **\$ts-checker-webpack** &mdash; adds errors and warnings reported by the fork-ts-checker-webpack-plugin
+- **\$ts-checker-webpack-watch** &mdash; adds errors and warnings reported by the fork-ts-checker-webpack-plugin while in watch mode
+- **\$ts-checker-eslint-webpack** &mdash; adds errors and warnings reported by the fork-ts-checker-webpack-plugin with ESLint
+- **\$ts-checker-eslint-webpack-watch** &mdash; adds errors and warnings reported by the fork-ts-checker-webpack-plugin with ESLint while in watch mode
+- **\$tslint-webpack** &mdash; adds lint warnings reported by tslint-loader
+- **\$tslint-webpack-watch** &mdash; adds lint warnings reported by tslint-loader while in watch mode
 
 ## Usage
 
@@ -36,9 +40,9 @@ The following example shows how to add problem matchers to your project:
 }
 ```
 
-👉 In order for **$ts-webpack-watch** and **$tslint-webpack-watch** to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --env.development --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
+👉 In order for **\$ts-webpack-watch**, **\$ts-checker-webpack-watch**, **\$ts-checker-eslint-webpack-watch** and **\$tslint-webpack-watch** to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --env.development --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
 
-You can also use **$ts-webpack-watch** and **$tslint-webpack-watch** as a base problem matcher for your own custom needs:
+You can also use any of the problem matchers as a base problem matcher for your own custom needs:
 
 ```json
 {

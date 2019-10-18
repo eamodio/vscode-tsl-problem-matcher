@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0]
+
+### Added
+
+- Adds new **\$ts-checker-webpack** and **\$ts-checker-webpack-watch** problem matchers to support errors and warnings reported by the [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+- Adds new **\$ts-checker-eslint-webpack** and **\$ts-checker-eslint-webpack-watch** problem matchers to support errors and warnings reported by [ESLint](https://eslint.org/) via the [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+- Adds warning support to **\$ts-webpack** and **\$ts-webpack-watch**
+
 ## [0.0.4]
 
 ### Added
@@ -20,7 +28,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Fixed
 
-- Fixes issue **$ts-webpack-watch** not handling absolute paths properly &mdash; Watch out for 🐛[Microsoft/vscode#56721](https://github.com/Microsoft/vscode/issues/56721) if you are basing a problem matcher on another
+- Fixes issue **\$ts-webpack-watch** not handling absolute paths properly &mdash; Watch out for 🐛[Microsoft/vscode#56721](https://github.com/Microsoft/vscode/issues/56721) if you are basing a problem matcher on another
 - Fixes issues with multi-root folders and tslint warnings
 - Fixes some issues with errors overlapping with language services
 
