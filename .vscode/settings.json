@@ -1,0 +1,6 @@
+{
+	"files.trimTrailingWhitespace": true,
+	"gitlens.advanced.blame.customArguments": ["--ignore-revs-file", ".gitignore-revs"],
+	"npm.packageManager": "yarn",
+	"prettier.requireConfig": true
+}

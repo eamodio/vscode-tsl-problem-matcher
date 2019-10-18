@@ -21,22 +21,22 @@ The following example shows how to add problem matchers to your project:
 
 ```json
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "type": "npm",
-      "script": "build",
-      "group": "build",
-      "problemMatcher": ["$ts-webpack", "$tslint-webpack"]
-    },
-    {
-      "type": "npm",
-      "script": "watch",
-      "group": "build",
-      "isBackground": true,
-      "problemMatcher": ["$ts-webpack-watch", "$tslint-webpack-watch"]
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": ["$ts-webpack", "$tslint-webpack"]
+		},
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": ["$ts-webpack-watch", "$tslint-webpack-watch"]
+		}
+	]
 }
 ```
 
@@ -46,46 +46,46 @@ You can also use any of the problem matchers as a base problem matcher for your 
 
 ```json
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "type": "npm",
-      "script": "build",
-      "group": "build",
-      "problemMatcher": ["$ts-webpack", "$tslint-webpack"]
-    },
-    {
-      "type": "npm",
-      "script": "watch",
-      "group": "build",
-      "isBackground": true,
-      "problemMatcher": [
-        {
-          "base": "$ts-webpack",
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": {
-              "regexp": "<your-custom-starting-regex-pattern here>"
-            },
-            "endsPattern": {
-              "regexp": "<your-custom-ending-regex-pattern here>"
-            }
-          }
-        },
-        {
-          "base": "$tslint-webpack",
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": {
-              "regexp": "<your-custom-starting-regex-pattern here>"
-            },
-            "endsPattern": {
-              "regexp": "<your-custom-ending-regex-pattern here>"
-            }
-          }
-        }
-      ]
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": ["$ts-webpack", "$tslint-webpack"]
+		},
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"base": "$ts-webpack",
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": {
+							"regexp": "<your-custom-starting-regex-pattern here>"
+						},
+						"endsPattern": {
+							"regexp": "<your-custom-ending-regex-pattern here>"
+						}
+					}
+				},
+				{
+					"base": "$tslint-webpack",
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": {
+							"regexp": "<your-custom-starting-regex-pattern here>"
+						},
+						"endsPattern": {
+							"regexp": "<your-custom-ending-regex-pattern here>"
+						}
+					}
+				}
+			]
+		}
+	]
 }
 ```

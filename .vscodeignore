@@ -6,6 +6,7 @@ test/**
 *.map
 .gitattributes
 .gitignore
+.gitignore-revs
 .prettierrc
 .yarnrc
 CODE_OF_CONDUCT.md
