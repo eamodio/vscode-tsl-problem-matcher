@@ -63,10 +63,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compilation (.*?)starting…"
+						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compilation (.*?)finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
 					}
 				}
 			},
@@ -101,10 +101,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compilation (.*?)starting…"
+						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compilation (.*?)finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
 					}
 				}
 			},
@@ -139,10 +139,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compilation (.*?)starting…"
+						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compilation (.*?)finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
 					}
 				}
 			},
@@ -186,10 +186,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compilation (.*?)starting…"
+						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compilation (.*?)finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
 					}
 				}
 			}
