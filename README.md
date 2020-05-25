@@ -44,7 +44,9 @@ The following example shows how to add problem matchers to your project:
 }
 ```
 
-👉 In order for **\$ts-webpack-watch**, **\$ts-checker-webpack-watch**, **\$ts-checker-eslint-webpack-watch** and **\$tslint-webpack-watch** to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --env.development --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
+👉 In order for **\$ts-webpack-watch**, **\$ts-checker-webpack-watch**, **\$ts-checker-eslint-webpack-watch**, and **\$tslint-webpack-watch** to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
+
+👉 In order for **\$ts-checker5-webpack**, **\$ts-checker5-webpack-watch**, **\$ts-checker5-eslint-webpack**, and **\$ts-checker5-eslint-webpack-watch** to work properly, you must set `formatter: 'basic'` in your [fork-ts-checker-webpack-plugin options](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin/tree/alpha#options) and add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
 
 You can also use any of the problem matchers as a base problem matcher for your own custom needs:
 
