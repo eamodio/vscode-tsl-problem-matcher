@@ -34,7 +34,7 @@
 		"problemMatchers": [
 			{
 				"name": "ts-webpack",
-				"label": "TypeScript + Webpack Problem Matcher (ts-loader)",
+				"label": "Webpack TypeScript Problem Matcher (ts-loader)",
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
@@ -49,15 +49,16 @@
 						"column": 4
 					},
 					{
-						"regexp": "\\s*TS\\d+:\\s*(.*)",
-						"message": 1
+						"regexp": "\\s*TS(\\d+):\\s*(.*)$",
+						"code": 1,
+						"message": 2
 					}
 				]
 			},
 			{
 				"base": "$ts-webpack",
 				"name": "ts-webpack-watch",
-				"label": "TypeScript + Webpack Watch Problem Matcher (ts-loader)",
+				"label": "Webpack (watch mode) TypeScript Problem Matcher (ts-loader)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -72,7 +73,7 @@
 			},
 			{
 				"name": "ts-checker-webpack",
-				"label": "TypeScript + Webpack Problem Matcher (ts-loader + fork-ts-checker-webpack-plugin)",
+				"label": "Webpack TypeScript Problem Matcher (fork-ts-checker-webpack-plugin)",
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
@@ -87,15 +88,16 @@
 						"column": 4
 					},
 					{
-						"regexp": "\\s*TS\\d+:\\s*(.*)",
-						"message": 1
+						"regexp": "\\s*TS(\\d+):\\s*(.*)$",
+						"code": 1,
+						"message": 2
 					}
 				]
 			},
 			{
 				"base": "$ts-checker-webpack",
 				"name": "ts-checker-webpack-watch",
-				"label": "TypeScript + Webpack Watch Problem Matcher (ts-loader + fork-ts-checker-webpack-plugin)",
+				"label": "Webpack (watch mode) TypeScript Problem Matcher (fork-ts-checker-webpack-plugin)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -110,7 +112,7 @@
 			},
 			{
 				"name": "ts-checker-eslint-webpack",
-				"label": "TypeScript + Webpack ESLint Problem Matcher (ts-loader + fork-ts-checker-webpack-plugin w/ eslint)",
+				"label": "Webpack ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin)",
 				"owner": "typescript",
 				"source": "eslint",
 				"applyTo": "closedDocuments",
@@ -125,15 +127,16 @@
 						"column": 4
 					},
 					{
-						"regexp": "\\s*(?:@typscript-eslint/)?.+?:\\s*(.*)",
-						"message": 1
+						"regexp": "\\s*(@typescript-eslint\\/.+):\\s*(.*)$",
+						"code": 1,
+						"message": 2
 					}
 				]
 			},
 			{
 				"base": "$ts-checker-eslint-webpack",
 				"name": "ts-checker-eslint-webpack-watch",
-				"label": "TypeScript + Webpack ESLint Watch Problem Matcher (ts-loader + fork-ts-checker-webpack-plugin w/ eslint)",
+				"label": "Webpack (watch mode) ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -147,8 +150,102 @@
 				}
 			},
 			{
+				"name": "ts-checker5-webpack",
+				"label": "Webpack TypeScript Problem Matcher (fork-ts-checker-webpack-plugin v5)",
+				"owner": "typescript",
+				"source": "ts",
+				"applyTo": "closedDocuments",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
+				"severity": "error",
+				"pattern": [
+					{
+						"kind": "location",
+						"regexp": "(ERROR|WARNING) in (.*)\\s+(\\d+):(\\d+)-(\\d+)",
+						"severity": 1,
+						"file": 2,
+						"line": 3,
+						"column": 4,
+						"endColumn": 5
+					},
+					{
+						"regexp": "\\s*TS(\\d+):\\s*(.*)$",
+						"code": 1,
+						"message": 2
+					}
+				]
+			},
+			{
+				"base": "$ts-checker5-webpack",
+				"name": "ts-checker5-webpack-watch",
+				"label": "Webpack (watch mode) TypeScript Problem Matcher (fork-ts-checker-webpack-plugin v5)",
+				"applyTo": "closedDocuments",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "Compiling.*?|Compilation .*?starting"
+					},
+					"endsPattern": {
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+					}
+				}
+			},
+			{
+				"name": "ts-checker5-eslint-webpack",
+				"label": "Webpack ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin v5)",
+				"owner": "typescript",
+				"source": "eslint",
+				"applyTo": "closedDocuments",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
+				"severity": "warning",
+				"pattern": [
+					{
+						"kind": "location",
+						"regexp": "(ERROR|WARNING) in (.*)\\s+(\\d+):(\\d+)-(\\d+)",
+						"severity": 1,
+						"file": 2,
+						"line": 3,
+						"column": 4,
+						"endColumn": 5
+					},
+					{
+						"regexp": "\\s*(@typescript-eslint\\/.+):\\s*(.*)$",
+						"code": 1,
+						"message": 2
+					}
+				]
+			},
+			{
+				"base": "$ts-checker5-eslint-webpack",
+				"name": "ts-checker5-eslint-webpack-watch",
+				"label": "Webpack (watch mode) ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin v5)",
+				"applyTo": "closedDocuments",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "Compiling.*?|Compilation .*?starting"
+					},
+					"endsPattern": {
+						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+					}
+				}
+			},
+			{
 				"name": "tslint-webpack",
-				"label": "TypeScript + Webpack TSLint Problem Matcher (tslint-loader)",
+				"label": "Webpack TSLint Problem Matcher (tslint-loader)",
 				"owner": "typescript",
 				"source": "tslint",
 				"applyTo": "closedDocuments",
@@ -177,7 +274,7 @@
 			{
 				"base": "$tslint-webpack",
 				"name": "tslint-webpack-watch",
-				"label": "TypeScript + Webpack TSLint Watch Problem Matcher (tslint-loader)",
+				"label": "Webpack TSLint Watch Problem Matcher (tslint-loader)",
 				"applyTo": "closedDocuments",
 				"fileLocation": [
 					"relative",
@@ -202,7 +299,7 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
-		"prettier": "1.19.1",
-		"vsce": "1.73.0"
+		"prettier": "2.0.5",
+		"vsce": "1.75.0"
 	}
 }
