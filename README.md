@@ -1,5 +1,7 @@
 # TypeScript + Webpack Problem Matchers for VS Code
 
+[![Visual Studio Marketplace](http://vsmarketplacebadge.apphb.com/version/eamodio.tsl-problem-matcher.svg)](https://marketplace.visualstudio.com/items?itemName=eamodio.tsl-problem-matcher)
+
 Provides [problem matchers](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers) for use with TypeScript projects using [Webpack](https://webpack.js.org/) with [ts-loader](https://github.com/TypeStrong/ts-loader), [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) with or without [ESLint](https://eslint.org/), and/or [tslint-loader](https://github.com/wbuchwalter/tslint-loader).
 
 ## Features
