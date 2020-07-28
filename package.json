@@ -163,12 +163,11 @@
 				"pattern": [
 					{
 						"kind": "location",
-						"regexp": "(ERROR|WARNING) in (.*)\\s+(\\d+):(\\d+)-(\\d+)",
+						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
 						"severity": 1,
 						"file": 2,
 						"line": 3,
-						"column": 4,
-						"endColumn": 5
+						"column": 4
 					},
 					{
 						"regexp": "\\s*TS(\\d+):\\s*(.*)$",
@@ -210,12 +209,11 @@
 				"pattern": [
 					{
 						"kind": "location",
-						"regexp": "(ERROR|WARNING) in (.*)\\s+(\\d+):(\\d+)-(\\d+)",
+						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
 						"severity": 1,
 						"file": 2,
 						"line": 3,
-						"column": 4,
-						"endColumn": 5
+						"column": 4
 					},
 					{
 						"regexp": "\\s*(@typescript-eslint\\/.+):\\s*(.*)$",
@@ -300,6 +298,6 @@
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
 		"prettier": "2.0.5",
-		"vsce": "1.75.0"
+		"vsce": "1.77.0"
 	}
 }
