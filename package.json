@@ -2,7 +2,7 @@
 	"name": "tsl-problem-matcher",
 	"displayName": "TypeScript + Webpack Problem Matchers",
 	"description": "Provides problem matchers for TypeScript projects using Webpack with ts-loader, fork-ts-checker-webpack-plugin with or without eslint, and/or tslint-loader",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"author": {
 		"name": "Eric Amodio",
 		"email": "eamodio@gmail.com"
@@ -297,7 +297,7 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
-		"prettier": "2.0.5",
-		"vsce": "1.77.0"
+		"prettier": "2.1.2",
+		"vsce": "1.81.1"
 	}
 }
