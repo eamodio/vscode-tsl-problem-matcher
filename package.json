@@ -34,7 +34,7 @@
 		"problemMatchers": [
 			{
 				"name": "ts-webpack",
-				"label": "Webpack TypeScript Problem Matcher (ts-loader)",
+				"label": "TypeScript Webpack problems (ts-loader)",
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
@@ -58,7 +58,7 @@
 			{
 				"base": "$ts-webpack",
 				"name": "ts-webpack-watch",
-				"label": "Webpack (watch mode) TypeScript Problem Matcher (ts-loader)",
+				"label": "TypeScript Webpack problems (ts-loader watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -73,7 +73,7 @@
 			},
 			{
 				"name": "ts-checker-webpack",
-				"label": "Webpack TypeScript Problem Matcher (fork-ts-checker-webpack-plugin)",
+				"label": "TypeScript Webpack problems (fork-ts-checker)",
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
@@ -97,7 +97,7 @@
 			{
 				"base": "$ts-checker-webpack",
 				"name": "ts-checker-webpack-watch",
-				"label": "Webpack (watch mode) TypeScript Problem Matcher (fork-ts-checker-webpack-plugin)",
+				"label": "TypeScript Webpack problems (fork-ts-checker watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -112,7 +112,7 @@
 			},
 			{
 				"name": "ts-checker-eslint-webpack",
-				"label": "Webpack ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin)",
+				"label": "ESLint Webpack problems (fork-ts-checker)",
 				"owner": "typescript",
 				"source": "eslint",
 				"applyTo": "closedDocuments",
@@ -136,7 +136,7 @@
 			{
 				"base": "$ts-checker-eslint-webpack",
 				"name": "ts-checker-eslint-webpack-watch",
-				"label": "Webpack (watch mode) ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin)",
+				"label": "ESLint Webpack problems (fork-ts-checker watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": "absolute",
 				"background": {
@@ -151,7 +151,7 @@
 			},
 			{
 				"name": "ts-checker5-webpack",
-				"label": "Webpack TypeScript Problem Matcher (fork-ts-checker-webpack-plugin v5)",
+				"label": "TypeScript Webpack problems (fork-ts-checker v5)",
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
@@ -179,7 +179,7 @@
 			{
 				"base": "$ts-checker5-webpack",
 				"name": "ts-checker5-webpack-watch",
-				"label": "Webpack (watch mode) TypeScript Problem Matcher (fork-ts-checker-webpack-plugin v5)",
+				"label": "TypeScript Webpack problems (fork-ts-checker v5 watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": [
 					"relative",
@@ -197,7 +197,7 @@
 			},
 			{
 				"name": "ts-checker5-eslint-webpack",
-				"label": "Webpack ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin v5)",
+				"label": "ESLint Webpack problems (fork-ts-checker v5)",
 				"owner": "typescript",
 				"source": "eslint",
 				"applyTo": "closedDocuments",
@@ -225,7 +225,7 @@
 			{
 				"base": "$ts-checker5-eslint-webpack",
 				"name": "ts-checker5-eslint-webpack-watch",
-				"label": "Webpack (watch mode) ESLint Problem Matcher (eslint via fork-ts-checker-webpack-plugin v5)",
+				"label": "ESLint Webpack problems (fork-ts-checker v5 watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": [
 					"relative",
@@ -243,7 +243,7 @@
 			},
 			{
 				"name": "tslint-webpack",
-				"label": "Webpack TSLint Problem Matcher (tslint-loader)",
+				"label": "TSLint Webpack problems (tslint-loader)",
 				"owner": "typescript",
 				"source": "tslint",
 				"applyTo": "closedDocuments",
@@ -272,7 +272,7 @@
 			{
 				"base": "$tslint-webpack",
 				"name": "tslint-webpack-watch",
-				"label": "Webpack TSLint Watch Problem Matcher (tslint-loader)",
+				"label": "TSLint Webpack problems (tslint-loader watch mode)",
 				"applyTo": "closedDocuments",
 				"fileLocation": [
 					"relative",
