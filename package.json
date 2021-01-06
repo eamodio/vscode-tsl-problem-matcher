@@ -67,7 +67,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished|webpack .* compiled with.* in "
 					}
 				}
 			},
@@ -106,7 +106,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished|webpack .* compiled with.* in "
 					}
 				}
 			},
@@ -145,7 +145,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "Compiled .*?successfully|Compilation .*?finished|webpack .* compiled with.* in "
 					}
 				}
 			},
