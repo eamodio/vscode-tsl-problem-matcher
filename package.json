@@ -67,7 +67,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
 					}
 				}
 			},
@@ -77,11 +77,15 @@
 				"owner": "typescript",
 				"source": "ts",
 				"applyTo": "closedDocuments",
-				"fileLocation": "absolute",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
 				"severity": "error",
 				"pattern": [
 					{
-						"regexp": "(ERROR|WARNING) in (.*)?\\((\\d+),(\\d+)\\)",
+						"kind": "location",
+						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
 						"severity": 1,
 						"file": 2,
 						"line": 3,
@@ -99,14 +103,17 @@
 				"name": "ts-checker-webpack-watch",
 				"label": "TypeScript Webpack problems (fork-ts-checker watch mode)",
 				"applyTo": "closedDocuments",
-				"fileLocation": "absolute",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
 					}
 				}
 			},
@@ -116,11 +123,15 @@
 				"owner": "typescript",
 				"source": "eslint",
 				"applyTo": "closedDocuments",
-				"fileLocation": "absolute",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
 				"severity": "warning",
 				"pattern": [
 					{
-						"regexp": "(ERROR|WARNING) in (.*)?\\((\\d+),(\\d+)\\)",
+						"kind": "location",
+						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
 						"severity": 1,
 						"file": 2,
 						"line": 3,
@@ -138,49 +149,6 @@
 				"name": "ts-checker-eslint-webpack-watch",
 				"label": "ESLint Webpack problems (fork-ts-checker watch mode)",
 				"applyTo": "closedDocuments",
-				"fileLocation": "absolute",
-				"background": {
-					"activeOnStart": true,
-					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
-					},
-					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
-					}
-				}
-			},
-			{
-				"name": "ts-checker5-webpack",
-				"label": "TypeScript Webpack problems (fork-ts-checker v5)",
-				"owner": "typescript",
-				"source": "ts",
-				"applyTo": "closedDocuments",
-				"fileLocation": [
-					"relative",
-					"${cwd}"
-				],
-				"severity": "error",
-				"pattern": [
-					{
-						"kind": "location",
-						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
-						"severity": 1,
-						"file": 2,
-						"line": 3,
-						"column": 4
-					},
-					{
-						"regexp": "\\s*TS(\\d+):\\s*(.*)$",
-						"code": 1,
-						"message": 2
-					}
-				]
-			},
-			{
-				"base": "$ts-checker5-webpack",
-				"name": "ts-checker5-webpack-watch",
-				"label": "TypeScript Webpack problems (fork-ts-checker v5 watch mode)",
-				"applyTo": "closedDocuments",
 				"fileLocation": [
 					"relative",
 					"${cwd}"
@@ -191,53 +159,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
-					}
-				}
-			},
-			{
-				"name": "ts-checker5-eslint-webpack",
-				"label": "ESLint Webpack problems (fork-ts-checker v5)",
-				"owner": "typescript",
-				"source": "eslint",
-				"applyTo": "closedDocuments",
-				"fileLocation": [
-					"relative",
-					"${cwd}"
-				],
-				"severity": "warning",
-				"pattern": [
-					{
-						"kind": "location",
-						"regexp": "(ERROR|WARNING) in (.*?):(\\d+):(\\d+)",
-						"severity": 1,
-						"file": 2,
-						"line": 3,
-						"column": 4
-					},
-					{
-						"regexp": "\\s*(@typescript-eslint\\/.+):\\s*(.*)$",
-						"code": 1,
-						"message": 2
-					}
-				]
-			},
-			{
-				"base": "$ts-checker5-eslint-webpack",
-				"name": "ts-checker5-eslint-webpack-watch",
-				"label": "ESLint Webpack problems (fork-ts-checker v5 watch mode)",
-				"applyTo": "closedDocuments",
-				"fileLocation": [
-					"relative",
-					"${cwd}"
-				],
-				"background": {
-					"activeOnStart": true,
-					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
-					},
-					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
 					}
 				}
 			},
@@ -284,7 +206,7 @@
 						"regexp": "Compiling.*?|Compilation .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "Compiled .*?successfully|Compilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
 					}
 				}
 			}
@@ -297,7 +219,7 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
-		"prettier": "2.1.2",
-		"vsce": "1.81.1"
+		"prettier": "2.2.1",
+		"vsce": "1.85.1"
 	}
 }
