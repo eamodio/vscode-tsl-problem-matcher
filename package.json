@@ -64,10 +64,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
+						"regexp": "Compiling.*?|Compilation .*?starting|Compiler starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished|Compiler finished"
 					}
 				}
 			},
