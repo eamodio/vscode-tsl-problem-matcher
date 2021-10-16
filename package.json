@@ -7,15 +7,21 @@
 		"name": "Eric Amodio",
 		"email": "eamodio@gmail.com"
 	},
-	"publisher": "eamodio",
+	"contributors": [
+		{
+			"name": "Felipe Santos",
+			"email": "felipecassiors@gmail.com"
+		}
+	],
+	"publisher": "felipecrs",
 	"license": "SEE LICENSE IN LICENSE",
-	"homepage": "https://github.com/eamodio/vscode-tsl-problem-matcher/blob/master/README.md",
+	"homepage": "https://github.com/felipecrs/vscode-tsl-problem-matcher#readme",
 	"bugs": {
-		"url": "https://github.com/eamodio/vscode-tsl-problem-matcher/issues"
+		"url": "https://github.com/felipecrs/vscode-tsl-problem-matcher/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/eamodio/vscode-tsl-problem-matcher.git"
+		"url": "https://github.com/felipecrs/vscode-tsl-problem-matcher.git"
 	},
 	"engines": {
 		"vscode": "^1.37.0"
