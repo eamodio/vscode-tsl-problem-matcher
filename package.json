@@ -7,7 +7,7 @@
 		"name": "Eric Amodio",
 		"email": "eamodio@gmail.com"
 	},
-	"publisher": "eamodio",
+	"publisher": "amodio",
 	"license": "SEE LICENSE IN LICENSE",
 	"homepage": "https://github.com/eamodio/vscode-tsl-problem-matcher/blob/master/README.md",
 	"bugs": {
@@ -64,10 +64,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
+						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -110,10 +110,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
+						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -156,10 +156,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
+						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -203,10 +203,10 @@
 				"background": {
 					"activeOnStart": true,
 					"beginsPattern": {
-						"regexp": "Compiling.*?|Compilation .*?starting"
+						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompilation .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			}
@@ -219,7 +219,7 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
-		"prettier": "2.2.1",
-		"vsce": "1.85.1"
+		"prettier": "2.4.1",
+		"vsce": "1.100.1"
 	}
 }

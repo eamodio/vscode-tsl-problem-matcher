@@ -40,11 +40,29 @@ The following example shows how to add problem matchers to your project:
 }
 ```
 
-👉 Using Webpack v4: In order for the _watch_ matchers to work properly, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
+### Webpack v5 (webpack-cli@4)
 
-👉 Using Webpack v5 or later: In order for the _watch_ matchers to work properly in Webpack v4, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile
+👉 Using Webpack v5 or later: In order for the _watch_ matchers to work properly in Webpack v4, you must add `--info-verbosity verbose` to your webpack watch command e.g. `webpack --watch --info-verbosity verbose` as this instructs webpack to output lifecycle event messages for each re-compile.
+
+### Webpack v4 (webpack-cli@3)
+
+n order for the _watch_ matchers to work properly, you must add `infrastructureLogging: { level: "log" }` to your `webpack.config.js` as this instructs webpack to output lifecycle event messages for each re-compile.
+
+For example:
+
+```js
+// webpack.config.js
+module.exports = {
+	// ...the webpack configuration
+	infrastructureLogging: {
+		level: 'log',
+	},
+};
+```
 
 👉 In addition, when using the **\$ts-checker-webpack**, **\$ts-checker-webpack-watch**, **\$ts-checker-eslint-webpack**, and **\$ts-checker-eslint-webpack-watch** matchers, you must also set `formatter: 'basic'` in your [fork-ts-checker-webpack-plugin options](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin/tree/alpha#options)
+
+## Custom Usage
 
 You can also use any of the problem matchers as a base problem matcher for your own custom needs:
 
