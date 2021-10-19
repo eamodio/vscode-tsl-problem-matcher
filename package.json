@@ -67,7 +67,7 @@
 						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?(error|warning))|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -113,7 +113,7 @@
 						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?(error|warning))|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -159,7 +159,7 @@
 						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?(error|warning))|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			},
@@ -206,7 +206,7 @@
 						"regexp": "[Cc]ompiling.*?|[Cc]ompil(ation|er) .*?starting"
 					},
 					"endsPattern": {
-						"regexp": "[Cc]ompiled (.*?successfully|with .*?error)|[Cc]ompil(ation|er) .*?finished"
+						"regexp": "[Cc]ompiled (.*?successfully|with .*?(error|warning))|[Cc]ompil(ation|er) .*?finished"
 					}
 				}
 			}
