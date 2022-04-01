@@ -219,7 +219,7 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "1.37.0",
-		"prettier": "2.4.1",
-		"vsce": "1.100.1"
+		"prettier": "2.6.1",
+		"vsce": "2.7.0"
 	}
 }
