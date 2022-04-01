@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.6.0]
+
+### Fixed
+
+- Fixes an issue where warnings weren't getting handled properly &mdash; thanks to [PR #12](https://github.com/gitkraken/vscode-gitlens/pull/12) by Connor Peet ([@connor4312](https://github.com/connor4312))
+
 ## [0.5.0]
 
 ### Changed
